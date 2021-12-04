@@ -1,0 +1,550 @@
+.navbar {
+  border-bottom: 2px solid white;
+  padding: 16px;
+}
+
+.navbar .navbar-toggler {
+  opacity: 0;
+}
+
+.navbar .collapse .navbar .nav-item a:hover {
+  color: gold !important;
+}
+
+.navbar .collapse .cart a {
+  position: relative;
+}
+
+.navbar .collapse .cart .icon {
+  font-size: 24px;
+}
+
+.navbar .collapse .cart .bag {
+  font-weight: bold;
+  left: 19px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  color: white;
+}
+
+.home-slider {
+  position: relative;
+}
+
+.home-slider .slider-item {
+  height: 500px;
+}
+
+.home-slider .col-md-8 {
+  position: absolute;
+  top: 39%;
+}
+
+.home-slider .col-md-8 span {
+  color: #c49b63;
+  font-size: 30px;
+}
+
+.home-slider .col-md-8 h1 {
+  color: white;
+}
+
+.home-slider .col-md-8 p {
+  color: white;
+}
+
+.home-slider .col-md-8 .order {
+  border: 1px solid #c49b63;
+  background-color: #c49b63;
+  color: white;
+  width: 136px;
+  height: 49px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.home-slider .col-md-8 .order:hover {
+  background-color: transparent;
+  color: #c49b63;
+}
+
+.home-slider .col-md-8 .view {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  border: 1px solid #c49b63;
+  background-color: transparent;
+  color: white;
+  width: 136px;
+  height: 49px;
+}
+
+.home-slider .col-md-8 .view:hover {
+  background-color: #c49b63;
+  color: white;
+}
+
+.ftco-intro {
+  margin-top: -25px;
+  background-color: black;
+}
+
+.ftco-intro .info {
+  width: calc(100% - 35%);
+  padding: 2% 5% 2% 12%;
+}
+
+.ftco-intro .icon {
+  width: 40px;
+}
+
+.ftco-intro .icon span {
+  margin-right: 22px;
+  color: #c49b63;
+  font-size: 20px;
+}
+
+.ftco-intro .text h3 {
+  font-size: 16px;
+  color: white;
+}
+
+.ftco-intro .text p {
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: gray;
+}
+
+.ftco-intro .book {
+  width: 35%;
+  background: #c49b63;
+  position: absolute;
+  right: 17px;
+  border: 3px;
+  z-index: 5555;
+  top: 473px;
+}
+
+.ftco-intro .book h3 {
+  text-transform: uppercase;
+}
+
+.ftco-intro .book form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ftco-intro .book .form-group .input-wrap {
+  width: 96px;
+  position: relative;
+}
+
+.ftco-intro .book .form-group .input-wrap .icon {
+  position: absolute;
+  top: 50% !important;
+  right: 0;
+  font-size: 14px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ftco-intro .book .form-group .input-wrap .icon span {
+  margin-right: 22px;
+  color: #4a4641;
+  font-size: 20px;
+}
+
+.ftco-intro .book .form-group .input-wrap input {
+  border: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  height: 58px !important;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 13px;
+  border-radius: 0px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.ftco-intro .book .form-group .input-wrap input::-webkit-input-placeholder {
+  color: white;
+}
+
+.ftco-intro .book .form-group .input-wrap input:-ms-input-placeholder {
+  color: white;
+}
+
+.ftco-intro .book .form-group .input-wrap input::-ms-input-placeholder {
+  color: white;
+}
+
+.ftco-intro .book .form-group .input-wrap input::placeholder {
+  color: white;
+}
+
+.ftco-intro .book .form-group .form-control {
+  border: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  height: 58px !important;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 13px;
+  border-radius: 0px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.ftco-intro .book .form-group .appoint {
+  background: white;
+  margin-left: 27px;
+  padding: 17px;
+  border: none;
+  border-radius: 3px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.ftco-intro .book .form-group .appoint:hover {
+  background-color: #c49b63;
+  color: white;
+  border: 1px solid white;
+}
+
+.ftco-about {
+  background-color: #1f1c1c;
+}
+
+.ftco-about .MainImg {
+  overflow: hidden;
+  position: relative;
+}
+
+.ftco-about .MainImg img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  max-width: 100%;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.ftco-about .MainImg img:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.ftco-about .overlap {
+  width: 603px;
+  left: -120px;
+  top: 60px;
+  height: 408px;
+  padding: 72px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.ftco-about .overlap .heading-section span {
+  color: #c49b63;
+  font-size: 24px;
+}
+
+.ftco-about .overlap .heading-section h2 {
+  color: white;
+}
+
+.ftco-about .overlap p {
+  color: white;
+  line-height: 28px;
+}
+
+.ftco-section {
+  background-color: #c49b63;
+}
+
+.ftco-section .services .icon {
+  overflow: hidden;
+}
+
+.ftco-section .services .icon span {
+  font-size: 60px;
+  color: #1d150b;
+  z-index: 1;
+  border: 1px solid black;
+  width: 122px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 122px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.ftco-section .services .icon span:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  background-color: white;
+  color: #c49b63;
+}
+
+.ftco-section .ftco-animate {
+  padding: 120px 65px;
+}
+
+.ftco-section .ftco-animate p {
+  padding: 8px 26px;
+}
+
+.ftco-section .ftco-animate h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ftco-section2 {
+  background-color: #181515;
+}
+
+.ftco-section2 .menu-entry {
+  overflow: hidden;
+}
+
+.ftco-section2 .menu-entry img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  max-width: 100%;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.ftco-section2 .menu-entry img:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.ftco-section2 span {
+  font-size: 50px;
+  display: block;
+  color: #c49b63;
+  margin-bottom: -19px;
+  margin-left: 10px;
+}
+
+.ftco-section2 h2 {
+  color: white;
+}
+
+.ftco-section2 p {
+  color: white;
+  width: 383px;
+  font-size: 17px;
+  font-weight: 100;
+  text-align: -webkit-auto;
+  margin-bottom: 1.5rem !important;
+}
+
+.ftco-section2 .discoverme {
+  padding: 13px 126px;
+}
+
+.ftco-section2 button {
+  padding: 13px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #c49b63;
+  color: #c49b63;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.ftco-section2 button:hover {
+  background-color: #c49b63;
+  color: white;
+}
+
+.ftco-counter {
+  height: 350px;
+}
+
+.ftco-counter .icon {
+  border: 1px solid wheat;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.ftco-counter .icon span {
+  font-size: 50px;
+  color: #c49b63;
+}
+
+.ftco-counter .icon:hover {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.ftco-counter .block-18 {
+  padding: 50px 5px;
+}
+
+.ftco-counter .counter {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ftco-counter .counter strong {
+  font-size: 30px;
+  color: #c49b63;
+}
+
+.ftco-counter .counter span {
+  color: white;
+}
+
+.BestSeller {
+  background-image: url("../images/bg_4.jpg");
+  width: 100%;
+  height: 1000px;
+}
+
+.BestSeller .menu-entry img {
+  max-width: 100%;
+}
+
+.BestSeller .menu-entry h3 a {
+  color: white;
+  font-weight: 200;
+}
+
+.BestSeller .menu-entry p {
+  color: gray;
+}
+
+.BestSeller .menu-entry p span {
+  color: white;
+}
+
+.BestSeller .menu-entry button {
+  border-radius: 5px;
+  padding: 7px 14px;
+  border: 1px solid #c49b63;
+  background-color: transparent;
+  color: #c49b63;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.BestSeller .menu-entry button:hover {
+  background-color: #c49b63;
+  color: white;
+}
+
+.BestSeller .col-md-7 {
+  padding: 67px;
+}
+
+.BestSeller .col-md-7 span {
+  font-weight: 200;
+  color: #c49b63;
+  font-size: 33px;
+}
+
+.BestSeller .col-md-7 h2 {
+  color: white;
+  font-size: 39px;
+}
+
+.BestSeller .col-md-7 p {
+  color: gray;
+}
+
+.ftco-gallery2 .border img {
+  position: relative;
+  max-width: 100%;
+}
+
+.ftco-gallery2 .border .icon {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  color: #c49b63;
+  left: 154px;
+  -webkit-transform: translateX(169px);
+          transform: translateX(169px);
+  position: absolute;
+  /* top: 103px; */
+  -webkit-transform: translateY(-273px);
+          transform: translateY(-273px);
+  font-size: 25px;
+  opacity: 0;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.ftco-gallery2 .border:hover .icon {
+  opacity: 1;
+  -webkit-transform: translateY(-170px);
+          transform: translateY(-170px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
