@@ -1,5 +1,29 @@
+.MainNavbar {
+  position: absolute;
+  z-index: 555;
+  border-bottom: 1px solid gray;
+}
+
+.MainNavbar .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: wheat;
+  padding: 10px 55px;
+}
+
+.MainNavbar .navbar-brand small {
+  margin-top: -8px;
+  margin-left: 10px;
+  color: white;
+}
+
 .navbar {
-  border-bottom: 2px solid white;
+  background: transparent;
   padding: 16px;
 }
 
@@ -7,8 +31,19 @@
   opacity: 0;
 }
 
-.navbar .collapse .navbar .nav-item a:hover {
-  color: gold !important;
+.navbar .collapse {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .collapse .navbar-nav .nav-item a {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.navbar .collapse .navbar-nav .nav-item a:hover {
+  color: #978835 !important;
 }
 
 .navbar .collapse .cart a {
@@ -17,6 +52,7 @@
 
 .navbar .collapse .cart .icon {
   font-size: 24px;
+  color: white;
 }
 
 .navbar .collapse .cart .bag {
@@ -29,7 +65,18 @@
   border: 1px solid;
   border-radius: 50%;
   position: absolute;
+  background-color: goldenrod;
   color: white;
+  border: none;
+}
+
+.navbar .collapse .cart .bag small {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.mobilbuton {
+  display: none !important;
 }
 
 .home-slider {
@@ -219,16 +266,16 @@
   border: 1px solid white;
 }
 
-.ftco-about {
+.ftco-about2 {
   background-color: #1f1c1c;
-}
-
-.ftco-about .MainImg {
-  overflow: hidden;
   position: relative;
 }
 
-.ftco-about .MainImg img {
+.ftco-about2 .MainImg {
+  overflow: hidden;
+}
+
+.ftco-about2 .MainImg img {
   -webkit-transform: scale(1);
           transform: scale(1);
   max-width: 100%;
@@ -236,31 +283,31 @@
   transition: 0.3s linear;
 }
 
-.ftco-about .MainImg img:hover {
+.ftco-about2 .MainImg img:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
 
-.ftco-about .overlap {
+.ftco-about2 .overlap2 {
   width: 603px;
   left: -120px;
   top: 60px;
   height: 408px;
-  padding: 72px;
+  padding: 47px;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.ftco-about .overlap .heading-section span {
+.ftco-about2 .overlap2 .heading-section span {
   color: #c49b63;
   font-size: 24px;
 }
 
-.ftco-about .overlap .heading-section h2 {
+.ftco-about2 .overlap2 .heading-section h2 {
   color: white;
 }
 
-.ftco-about .overlap p {
+.ftco-about2 .overlap2 p {
   color: white;
   line-height: 28px;
 }
@@ -605,33 +652,33 @@
   color: #c49b63;
 }
 
-.ftco-section {
-  height: 1203px;
+.ftco-sections3 {
+  height: 1255px;
 }
 
-.ftco-section span {
+.ftco-sections3 span {
   color: #c49b63;
   font-size: 35px;
 }
 
-.ftco-section h2 {
+.ftco-sections3 h2 {
   color: white;
 }
 
-.ftco-section p {
+.ftco-sections3 p {
   padding: 17px;
   color: white;
   font-size: 13px;
   line-height: 34px;
 }
 
-.ftco-section .testimony {
+.ftco-sections3 .testimony {
   background: #c49b63;
   width: 300px;
   height: 300px;
 }
 
-.ftco-section .testimony img {
+.ftco-sections3 .testimony img {
   width: 20px;
   border-radius: 50%;
   height: 20px;
@@ -850,8 +897,8 @@
   border-radius: 16px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .2s ease-out, visibility 0s linear .2s;
-  transition: opacity .2s ease-out, visibility 0s linear .2s;
+  -webkit-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+  transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
   z-index: 1000;
 }
 
@@ -870,8 +917,8 @@
 }
 
 #ftco-loader.show {
-  -webkit-transition: opacity .4s ease-out, visibility 0s linear 0s;
-  transition: opacity .4s ease-out, visibility 0s linear 0s;
+  -webkit-transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+  transition: opacity 0.4s ease-out, visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
 }
@@ -939,11 +986,50 @@
   }
 }
 
+#about {
+  background-image: url("../images/bg_3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+#about .desc {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 18%;
+}
+
+#about .desc h1 {
+  color: white;
+}
+
+#about .desc p a {
+  color: #c49b63;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#about .desc p span {
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.aboutftco {
+  padding: 54px;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
