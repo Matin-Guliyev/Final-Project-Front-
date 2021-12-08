@@ -1,0 +1,40 @@
+.servicesFoot {
+    h2 {
+        color: white;
+        font-size: 30px;
+        font-weight: 200;
+    }
+    p {
+        color: white;
+    }
+    ul {
+        li {
+            a {
+                span {
+                    font-size:34px;
+                    transition: 0.3s linear;
+                    &:hover {
+                        color: rgb(177, 143, 57);
+                    }
+                }
+            }
+        }
+    }
+    .blocks {
+        ul {
+            padding: 0;
+            li {
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+    .ftco-heading-2 {
+        font-size: 30px;
+        font-weight: 200;
+    }
+    .list-unstyled {
+        margin-left: 22px;
+    }
+}

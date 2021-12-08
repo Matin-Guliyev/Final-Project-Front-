@@ -509,7 +509,7 @@
             width: 141px;
 
             background: transparent;
-            padding: 12px;
+            padding: 16px 26px;
             border: 1px solid #c49b63;
             color: white;
             transition: 0.3s linear;
@@ -789,5 +789,10 @@
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
+    }
+}
+.productItem{
+    a{
+        padding: 13px 24px;
     }
 }
