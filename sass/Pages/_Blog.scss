@@ -1,0 +1,70 @@
+#Blog{
+    padding-top: 100px;
+    background-image: url("../images/bg_4.jpg");
+    width: 100%;
+    height: 1450px;
+    background-attachment: fixed;
+   .blog-item {
+       img{
+        width: 392px;
+        height: 342px;
+           object-fit: cover;
+       }
+       .imageText{
+           display: flex;
+           a{
+               color: white;
+               margin-right: 10px;
+               &:hover{
+                   color: rgb(187, 149, 78);
+               }
+           }
+         
+       }
+       .imageHead{
+           a{
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: .3s linear;
+            color: white;
+            &:hover{
+
+                color: rgb(196, 160, 93);
+            }
+           }
+       }
+       p{
+       
+        color: white;
+        font-size: 15px;
+        line-height: 29px;
+       }
+   } 
+   .block-27{
+       display: flex;
+       justify-content: center;
+     ul{
+         list-style: none;
+         display: flex;
+         li{
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid rgb(107, 86, 46);
+            border-radius: 50%;
+            background: transparent;
+            color: rgb(172, 130, 51);
+            margin-right: 4px;
+            a{
+                color: rgb(172, 130, 51);
+              
+            }
+            
+         }
+         .active{  background-color: rgb(168, 130, 58);
+            color: black;
+           
+        }
+     }
+   }
+}

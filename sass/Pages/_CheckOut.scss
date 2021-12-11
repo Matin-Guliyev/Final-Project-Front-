@@ -1,0 +1,257 @@
+#checkOut {
+    padding-top: 100px;
+    background-image: url("../images/bg_4.jpg");
+    width: 100%;
+    height: 1450px;
+    .checkoutbody {
+       .checkbodyItems{
+       background-color: black;
+       h3 {
+        color: white;
+    }
+    label {
+        color: white;
+        font-size: 14px;
+        font-weight: 100;
+    }
+    input {
+        border-radius: 0px;
+        background-color: transparent;
+        border: 1px solid rgb(241, 232, 217);
+        padding: 17px 30px;
+        &:focus {
+            box-shadow: none;
+            border: 1px solid rgb(165, 128, 59);
+        }
+    }
+    .forms {
+        padding-top: 20px;
+    }
+    .select-wraps {
+        position: relative;
+
+        select {
+            background: transparent;
+            padding: 15px 20px;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .icon {
+            margin-right: 16px;
+            span{
+                color: white;
+                font-size: 17px;
+                position: absolute;
+                top: 11px;
+                /* left: 0; */
+                right: 18px;
+            }
+        }
+    }
+    .radio{
+        label{
+            margin-right: 13px;
+        }
+    }
+       }
+      
+       
+    }
+    #flexible{
+        justify-content: space-around;
+        #checkfooterLeft{
+            
+            background-color: black;
+            width: 285px;
+            h3{
+                color: white;
+            }
+            span{
+                color: white;
+                font-size: 13px;
+                font-weight: 200;
+            }
+            .total-price{
+                justify-content: space-between;
+                .pricetotal{
+                    #total{
+                        font-size: 18px;
+                        color: white;
+                    }
+                    color: wheat;
+                    font-size: 18px;
+                }
+            }
+            .flexp{
+                justify-content: space-between;
+            }
+            hr{
+                width: auto;
+                color: wheat;
+            }
+        }
+        #checkfooterigth{
+            width: 386px;
+            background-color: black;
+            height: 400px;
+            h3{
+                color: white;
+            }
+            label{
+                color: white;
+                font-size: 15px;
+                font-weight: 200;
+            }
+            .radios{
+                padding: 9px 9px;
+                input{
+                    margin-right: 22px;
+                }
+            }
+            .checkboxs{
+                padding: 9px 9px;
+                input{
+                    margin-right: 22px;
+                }
+            }
+            #Subbut{
+                width: 100%;
+                height: 44px;
+                border: 1px solid rgb(153, 126, 77);
+                background-color: rgb(156, 123, 63);
+                color: black;
+                font-size:14px;
+                &:hover{
+                    background-color:transparent;
+                    color: wheat;
+                }
+            }
+        }
+    }
+    .sidebar{
+        padding: 0px 30px;
+        .search-form{
+            width: 300px;
+        }
+    }
+    .search{
+        margin-bottom: 0;
+        position: relative;
+        .icon{
+            position: absolute;
+            top: 7px;
+            right: 18px;
+        }
+        input{
+            border: none;
+            border-bottom: 1px solid wheat;
+            border-radius: 0;
+            font-size: 14px;
+            padding-right: 50px;
+            background: transparent;
+          
+            border-bottom: 1px solid gray;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+    .categories{
+        padding-top: 60px;
+        h3{
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 400;
+        }
+        li{
+            padding-top: 30px;
+            list-style: none;
+            a{
+                color: white;
+                text-decoration:none;
+                display: flex;
+                justify-content: space-around;
+                font-size: 13px;
+                font-weight: 300;
+            }
+        }
+    }
+    .recent{
+        padding-top: 60px;
+        h3{
+            font-size: 15px;
+            font-weight: 300;
+            color: white;
+        }
+        .block-24{
+            img{
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+                margin-right: 30px;
+            }
+           .blockhead{
+               a{
+                   color: white;
+                   font-size: 14px;
+                   &:hover{
+                       color: wheat;
+                   }
+               }
+           }
+           .blockbody{
+               display: flex;
+               a{
+                   color: white;
+                   text-decoration: none;
+                   font-size: 12px;
+                   margin-right: 15px;
+                   span{
+                       margin-right: 5px;
+                   }
+               }
+           }
+        }
+    }
+    .cloud{
+        padding-top: 60px;
+        h3{
+            font-size: 20px;
+            color: white;
+        }
+        .tagcloud{
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                color: white;
+                font-size: 12px;
+                /* width: 38px; */
+                border: 1px solid;
+                padding: 6px 21px;
+                margin-right: 10px;
+                margin-bottom: 5px;
+                &:hover{
+                    background: wheat;
+                    color: black;
+                }
+              
+            }
+        }
+        
+    }
+    .paragraf{
+        padding-top: 50px;
+        h3{
+            color: white;
+            font-size: 20px;
+        }
+        p{
+            color: white;
+            font-size: 13px;
+            font-weight: 200;
+        }
+    }
+    
+}
