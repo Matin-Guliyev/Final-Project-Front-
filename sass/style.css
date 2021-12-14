@@ -32,18 +32,23 @@
 }
 
 .navbar .collapse {
+  padding-top: 7px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .navbar .collapse .navbar-nav .nav-item a {
-  font-size: 16px;
-  font-weight: 200;
+  text-align: center;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin-right: 32px;
 }
 
 .navbar .collapse .navbar-nav .nav-item a:hover {
-  color: #978835 !important;
+  color: #e0b159 !important;
 }
 
 .navbar .collapse .cart a {
@@ -52,7 +57,6 @@
 
 .navbar .collapse .cart .icon {
   font-size: 24px;
-  color: white;
 }
 
 .navbar .collapse .cart .bag {
@@ -250,6 +254,26 @@
   box-shadow: none !important;
 }
 
+.ftco-intro .book .form-group .form-control::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.ftco-intro .book .form-group .form-control:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.ftco-intro .book .form-group .form-control::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.ftco-intro .book .form-group .form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
 .ftco-intro .book .form-group .appoint {
   background: white;
   margin-left: 27px;
@@ -309,7 +333,9 @@
 
 .ftco-about2 .overlap2 p {
   color: white;
-  line-height: 28px;
+  line-height: 33px;
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .ftco-section {
@@ -347,6 +373,7 @@
           transform: scale(1.07);
   background-color: white;
   color: #c49b63;
+  border: none;
 }
 
 .ftco-section .ftco-animate {
@@ -652,78 +679,148 @@
   color: #c49b63;
 }
 
-.ftco-sections3 {
-  height: 1255px;
+.tesimonial {
+  background-image: url("../images/bg_1.jpg");
+  width: 100%;
+  height: 722px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-.ftco-sections3 span {
-  color: #c49b63;
-  font-size: 35px;
+.tesimonial .testimony {
+  width: 100%;
+  height: 340px;
+  background-color: #c49b63;
 }
 
-.ftco-sections3 h2 {
-  color: white;
+.tesimonial .testimony .author {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.ftco-sections3 p {
-  padding: 17px;
-  color: white;
-  font-size: 13px;
-  line-height: 34px;
+.tesimonial .testimony .author .name {
+  margin-left: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.ftco-sections3 .testimony {
-  background: #c49b63;
-  width: 300px;
-  height: 300px;
-}
-
-.ftco-sections3 .testimony img {
-  width: 20px;
+.tesimonial .testimony .author .image img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  height: 20px;
+  border: 1px solid transparent;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.ftco-section3 {
-  background-image: url("../images/bg_4.jpg");
-  width: 100%;
-  height: 203vh;
+.tesimonial .testimony .TesItem {
+  padding: 42px 48px;
 }
 
-.ftco-section3 .blog-entry img {
+.tesimonial .testimony-overlay {
+  width: 100%;
+  height: 414px;
+  background-color: #bc8f52;
+}
+
+.tesimonial .testimony-overlay .author {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tesimonial .testimony-overlay .author .image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tesimonial .tes {
+  padding: 0;
+}
+
+.tesimonial .TesItem {
+  padding: 42px 48px;
+}
+
+.tesimonial .tesimonialHead {
+  padding: 47px;
+}
+
+.tesimonial .Theading {
+  color: #bc8f52;
+  font-size: 26px;
+}
+
+.tesimonial .custom {
+  color: white;
+}
+
+.tesimonial .TesiText {
+  color: white;
+}
+
+.ftcorange {
+  background-image: url("../images/bg_4.jpg");
+  width: 100%;
+  height: 140vh;
+  padding-top: 70px;
+}
+
+.ftcorange .recent {
+  color: white;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.ftcorange .farrecent {
+  color: white;
+  font-weight: 200;
+}
+
+.ftcorange .blog-entry img {
   width: 405px;
   height: 393px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.ftco-section3 .blog-entry a {
+.ftcorange .blog-entry a {
   color: white;
 }
 
-.ftco-section3 .blog-entry .text h3 {
+.ftcorange .blog-entry .text h3 {
   font-size: 16px;
 }
 
-.ftco-section3 .blog-entry .text .meta {
+.ftcorange .blog-entry .text .meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.ftco-section3 .blog-entry .text .meta a {
+.ftcorange .blog-entry .text .meta a {
   margin-right: 13px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
 }
 
-.ftco-section3 .blog-entry .text .meta a:hover {
+.ftcorange .blog-entry .text .meta a:hover {
   color: #c49b63;
 }
 
-.ftco-section3 .blog-entry .text p {
+.ftcorange .blog-entry .text p {
   color: wheat;
 }
 
