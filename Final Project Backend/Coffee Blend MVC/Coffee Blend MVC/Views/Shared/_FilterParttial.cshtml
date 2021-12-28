@@ -1,0 +1,25 @@
+﻿
+@model List<Filter>
+@foreach (var item in Model)
+{<div class="col-md-4 text-center">
+        <div class="menu-wrap">
+            <a href="~/#" class="menu-img img mb-4">
+                <img src="~/images/@item.Images" alt="">
+            </a>
+            <div class="text">
+                <h3><a href="~/#">@item.Name</a></h3>
+                <p>
+                    @item.Desc
+                </p>
+                <p class="price"><span>$@item.Price</span></p>
+                <p>
+                    <a href="~/#" class="btn btn-primary btn-outline-primary">
+                        Add to
+                        cart
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+}

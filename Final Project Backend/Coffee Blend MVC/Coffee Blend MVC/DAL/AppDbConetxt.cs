@@ -15,6 +15,7 @@ namespace Coffee_Blend_MVC.DAL
         }
 
         public DbSet<HomeSlider> HomeSliders {get; set;}
+        public DbSet<Filter> Filters { get; set; }
         public DbSet<MainImage>  MainImages { get; set; }
         public DbSet<FtcoServices> FtcoServices { get; set; }
         public DbSet<OurMenu> OurMenus { get; set; }

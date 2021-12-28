@@ -25,20 +25,22 @@ namespace Coffee_Blend_MVC.Controllers
         {
             HomeVM homeVM = new HomeVM
             {
-                HomeSliders= await _context.HomeSliders.ToListAsync(),
+                HomeSliders = await _context.HomeSliders.ToListAsync(),
                 MainImages = await _context.MainImages.FirstOrDefaultAsync(),
-                FtcoServices=await _context.FtcoServices.ToListAsync(),
-                OurMenus=await _context.OurMenus.FirstOrDefaultAsync(),
-                OurMenuImages=await _context.OurMenuImages.ToListAsync(),
-                Counters=await _context.Counters.ToListAsync(),
-                BestSellers =await _context.BestSellers.FirstOrDefaultAsync(),
-                BestSellersImages=await _context.BestSellersImages.ToListAsync(),
-                FtcoGallery2s=await _context.FtcoGallery2s.ToListAsync(),
-                Testimonies=await _context.Testimonies.FirstOrDefaultAsync(),
-                Recents=await _context.Recents.FirstOrDefaultAsync(),
-                RecentImages=await _context.RecentImages.ToListAsync()
-                
-                
+                FtcoServices = await _context.FtcoServices.ToListAsync(),
+                OurMenus = await _context.OurMenus.FirstOrDefaultAsync(),
+                OurMenuImages = await _context.OurMenuImages.ToListAsync(),
+                Counters = await _context.Counters.ToListAsync(),
+                BestSellers = await _context.BestSellers.FirstOrDefaultAsync(),
+                BestSellersImages = await _context.BestSellersImages.ToListAsync(),
+                FtcoGallery2s = await _context.FtcoGallery2s.ToListAsync(),
+                Testimonies = await _context.Testimonies.FirstOrDefaultAsync(),
+                Recents = await _context.Recents.FirstOrDefaultAsync(),
+                RecentImages = await _context.RecentImages.ToListAsync(),
+                MainDish = await _context.Filters.Where(x => x.IsMainDish).ToListAsync(),
+                Drinks = await _context.Filters.Where(x=>x.IsDrink).ToListAsync(),
+                Desserts = await _context.Filters.Where(x => x.IsDessert).ToListAsync()
+
             };
             return View(homeVM);
         }

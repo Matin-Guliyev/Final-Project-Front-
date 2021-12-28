@@ -20,5 +20,8 @@ namespace Coffee_Blend_MVC.ViewModels
         public Testimony Testimonies { get; set; }
         public Recent Recents { get; set; }
         public List<RecentImage> RecentImages { get; set; }
+        public List<Filter> MainDish { get; set; }
+        public List<Filter> Drinks { get; set; }
+        public List<Filter> Desserts { get; set; }
     }
 }

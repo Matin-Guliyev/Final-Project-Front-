@@ -8482,11 +8482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Final Project Backend\\Coffee Blend MVC\\Coffee Blend MVC\\Coffee Blend.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Final Project\\Final Project Backend\\Coffee Blend MVC\\Coffee Blend MVC\\Coffee Blend.csproj",
       "projectName": "Coffee Blend",
-      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Final Project Backend\\Coffee Blend MVC\\Coffee Blend MVC\\Coffee Blend.csproj",
+      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Final Project\\Final Project Backend\\Coffee Blend MVC\\Coffee Blend MVC\\Coffee Blend.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Final Project Backend\\Coffee Blend MVC\\Coffee Blend MVC\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Final Project\\Final Project Backend\\Coffee Blend MVC\\Coffee Blend MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
