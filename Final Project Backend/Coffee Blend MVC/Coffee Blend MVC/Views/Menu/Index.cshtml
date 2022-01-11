@@ -93,232 +93,33 @@
 <section class="Menu">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mb-5 pb-3">
-                <h3 class="mb-5 headingText ftco-animate">Starter</h3>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"> <img src="~/images/dish-2.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Cornish - Mackerel</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"> <img src="~/images/dish-3.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Roasted Steak</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$29.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
+            <h4 style="text-align:center;color:white">
+                Menu
+            </h4>
+            @foreach (var item in Model.Menus)
+            {<div class="col-md-6">
+                   
+                    <div class="pricing-entry d-flex ftco-animate">
+                        <div class="img"> <img src="images/@item.Image" alt=""></div>
+                        <div class="desc pl-3">
+                            <div class="d-flex text align-items-center">
+                                <h3><span>Cornish - Mackerel</span></h3>
+                                <span class="item__dots"></span>
+                                <span class="price">$@item.Price</span>
+                            </div>
+                            <div class="d-block">
+                                <p>A small river named Duden flows by their place and supplies</p>
+                            </div>
                         </div>
                     </div>
+                   
                 </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-4.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Seasonal Soup</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-5.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Chicken Curry</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 mb-5 pb-3">
-                <h3 class="mb-5 headingText ftco-animate">Main Dish</h3>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-6.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Sea Trout</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$49.91</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-7.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Roasted Beef</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-8.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Butter Fried Chicken</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-5.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Chiken Filet</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h3 class="mb-5 headingText ftco-animate">Desserts</h3>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"> <img src="~/images/dish-1.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Cornish - Mackerel</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-6.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Roasted Steak</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$29.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-5.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Seasonal Soup</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/dish-6.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Chicken Curry</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h3 class="mb-5 headingText ftco-animate">Drinks</h3>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/drink-2.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Sea Trout</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$49.91</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/drink-3.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Roasted Beef</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"><img src="~/images/drink-4.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Butter Fried Chicken</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img"> <img src="~/images/drink-1.jpg" alt=""></div>
-                    <div class="desc pl-3">
-                        <div class="d-flex text align-items-center">
-                            <h3><span>Chiken Filet</span></h3>
-                            <span class="item__dots"></span>
-                            <span class="price">$20.00</span>
-                        </div>
-                        <div class="d-block">
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
+
 <section class="ftco-menu">
     <div class="container">
         <div class="row justify-content-center mb-5">
@@ -334,16 +135,16 @@
         <div class="row d-md-flex">
             <div class="col-lg-12 ftco-animate p-md-5">
                 <div class="row">
-                    <div class="col-md-12   nav-link-wrap mb-5">
-                        <div class="nav  ftco-animate nav-pills justify-content-center" id="v-pills-tab"
+                    <div class="col-md-12 nav-link-wrap mb-5">
+                        <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab"
                              role="tablist" aria-orientation="vertical">
-                            <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="~/#v-pills-1"
+                            <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
                                role="tab" aria-controls="v-pills-1" aria-selected="true">Main Dish</a>
 
-                            <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="~/#v-pills-2" role="tab"
+                            <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab"
                                aria-controls="v-pills-2" aria-selected="false">Drinks</a>
 
-                            <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="~/#v-pills-3" role="tab"
+                            <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab"
                                aria-controls="v-pills-3" aria-selected="false">Desserts</a>
                         </div>
                     </div>
@@ -354,209 +155,23 @@
                             <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
                                  aria-labelledby="v-pills-1-tab">
                                 <div class="row">
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/dish-1.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Grilled Beef</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/dish-2.jpg"
-                                                     alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Grilled Beef</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/dish-3.jpg"
-                                                     alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Grilled Beef</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
+                                    @await Html.PartialAsync("_FilterParttial", Model.MainDish)
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
                                  aria-labelledby="v-pills-2-tab">
                                 <div class="row">
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/drink-1.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Lemonade Juice</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/drink-2.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Pineapple Juice</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/drink-3.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Soda Drinks</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @await Html.PartialAsync("_FilterParttial", Model.Drinks)
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="v-pills-3" role="tabpanel"
                                  aria-labelledby="v-pills-3-tab">
                                 <div class="row">
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/dessert-1.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Hot Cake Honey</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/dessert-2.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Hot Cake Honey</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <a href="~/#" class="menu-img img mb-4">
-                                                <img src="~/images/dessert-3.jpg" alt="">
-                                            </a>
-                                            <div class="text">
-                                                <h3><a href="~/#">Hot Cake Honey</a></h3>
-                                                <p>
-                                                    Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia.
-                                                </p>
-                                                <p class="price"><span>$2.90</span></p>
-                                                <p>
-                                                    <a href="~/#" class="btn btn-primary btn-outline-primary">
-                                                        Add to
-                                                        cart
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @await Html.PartialAsync("_FilterParttial", Model.Desserts)
                                 </div>
                             </div>
                         </div>

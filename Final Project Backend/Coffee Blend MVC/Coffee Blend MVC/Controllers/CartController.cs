@@ -19,7 +19,7 @@ namespace Coffee_Blend_MVC.Controllers
         public async Task<IActionResult> Index()
         {
 
-            CartVM MenuVM = new CartVM
+            CartVM CartVM = new CartVM
             {
 
             };

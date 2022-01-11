@@ -12,9 +12,5 @@ namespace Coffee_Blend_MVC.ViewModels
         public OurMenu OurMenus { get; set; }
         public List<OurMenuImages> OurMenuImages { get; set; }
         public List<Counter> Counters { get; set; }
-
-
-
-
     }
 }

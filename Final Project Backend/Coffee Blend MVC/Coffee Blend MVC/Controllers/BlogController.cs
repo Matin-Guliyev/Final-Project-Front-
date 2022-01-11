@@ -19,7 +19,7 @@ namespace Coffee_Blend_MVC.Controllers
         public async Task<IActionResult> Index()
         {
 
-            BlogVM MenuVM = new BlogVM
+            BlogVM BlogVM = new BlogVM
             {
 
             };

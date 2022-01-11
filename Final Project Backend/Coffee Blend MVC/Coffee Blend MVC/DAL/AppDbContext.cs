@@ -1,5 +1,6 @@
 ﻿using Coffee_Blend_MVC.Models;
 using Coffee_Blend_MVC.Models.ServicesModels;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Coffee_Blend_MVC.DAL
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext: IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
@@ -29,6 +30,10 @@ namespace Coffee_Blend_MVC.DAL
         public DbSet<RecentImage> RecentImages { get; set; }
         public DbSet<Discover> Discovers { get; set; }
         public DbSet<DiscoverImage> DiscoverImages { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<MenuHead> MenuHeads { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
     }
 }

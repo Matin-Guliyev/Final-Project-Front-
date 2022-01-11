@@ -19,7 +19,7 @@ namespace Coffee_Blend_MVC.Controllers
         public async Task<IActionResult> Index()
         {
 
-            CheckoutVM MenuVM = new CheckoutVM
+            CheckoutVM CheckoutVM = new CheckoutVM
             {
 
             };

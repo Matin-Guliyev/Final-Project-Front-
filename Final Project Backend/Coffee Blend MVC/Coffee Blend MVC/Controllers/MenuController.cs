@@ -1,6 +1,7 @@
 ﻿using Coffee_Blend_MVC.DAL;
 using Coffee_Blend_MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,14 @@ namespace Coffee_Blend_MVC.Controllers
 
             MenuVM MenuVM = new MenuVM
             {
+                Menus = await _context.Menus.ToListAsync(),
+                MenuHeads = await _context.MenuHeads.ToListAsync(),
+                MainDish = await _context.Filters.Where(x => x.IsMainDish).ToListAsync(),
+                Drinks = await _context.Filters.Where(x => x.IsDrink).ToListAsync(),
+                Desserts = await _context.Filters.Where(x => x.IsDessert).ToListAsync()
 
             };
-            return View();
+            return View(MenuVM);
         }
     }
 }

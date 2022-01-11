@@ -13,7 +13,5 @@ namespace Coffee_Blend_MVC.ViewModels
         public ICollection<DiscoverImage> DiscoverImages { get; set; }
         public List<Counter> Counters { get; set; }
         public List<FtcoServices> FtcoServices { get; set; }
-
-
     }
 }

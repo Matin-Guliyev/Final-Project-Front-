@@ -1,6 +1,7 @@
 ﻿using Coffee_Blend_MVC.DAL;
 using Coffee_Blend_MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,13 @@ namespace Coffee_Blend_MVC.Controllers
         public async Task<IActionResult> Index()
         {
 
-            ShopVM MenuVM = new ShopVM
+            ShopVM ShopVM = new ShopVM
             {
-
+                MainDish = await _context.Filters.Where(x => x.IsMainDish).ToListAsync(),
+                Drinks = await _context.Filters.Where(x => x.IsDrink).ToListAsync(),
+                Desserts = await _context.Filters.Where(x => x.IsDessert).ToListAsync()
             };
-            return View();
+            return View(ShopVM);
         }
     }
 }
