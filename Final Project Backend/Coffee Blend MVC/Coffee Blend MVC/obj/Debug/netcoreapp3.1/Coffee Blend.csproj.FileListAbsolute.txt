@@ -333,3 +333,4 @@ C:\Users\ASUS\OneDrive\Desktop\Final Project\Final Project Backend\Coffee Blend 
 C:\Users\ASUS\OneDrive\Desktop\Final Project\Final Project Backend\Coffee Blend MVC\Coffee Blend MVC\obj\Debug\netcoreapp3.1\Coffee Blend.pdb
 C:\Users\ASUS\OneDrive\Desktop\Final Project\Final Project Backend\Coffee Blend MVC\Coffee Blend MVC\obj\Debug\netcoreapp3.1\Coffee Blend.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Desktop\Final Project\Final Project Backend\Coffee Blend MVC\Coffee Blend MVC\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Order\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Desktop\Final Project\Final Project Backend\Coffee Blend MVC\Coffee Blend MVC\obj\Debug\netcoreapp3.1\Coffee Blend.csproj.AssemblyReference.cache

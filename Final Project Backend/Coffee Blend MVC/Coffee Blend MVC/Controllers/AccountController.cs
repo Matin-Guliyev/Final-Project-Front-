@@ -115,7 +115,7 @@ namespace Coffee_Blend_MVC.Controllers
 
             string emailbody = string.Empty;
 
-            using (StreamReader stream = new StreamReader(Path.Combine(_env.WebRootPath, "Template", "ConfirmEmailpage.html")))
+            using (StreamReader stream = new StreamReader(Path.Combine(_env.WebRootPath, "Templates", "ConfirmEmail.html")))
             {
                 emailbody = stream.ReadToEnd();
             }
@@ -186,8 +186,8 @@ namespace Coffee_Blend_MVC.Controllers
                 return NotFound();
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("CoffeeBlend", "coffeeblend@gmail.com"));
-            message.To.Add(new MailboxAddress(appUser.Name, appUser.Email));
+            message.From.Add(new MailboxAddress("CoffeShop", "shopwisesite@gmail.com"));
+            message.To.Add(new MailboxAddress(appUser.UserName, appUser.Email));
             message.Subject = "Reset Password";
 
             string emailbody = string.Empty;
