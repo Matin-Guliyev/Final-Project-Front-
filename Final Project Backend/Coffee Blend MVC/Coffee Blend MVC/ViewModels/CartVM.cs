@@ -7,5 +7,7 @@ namespace Coffee_Blend_MVC.ViewModels
 {
     public class CartVM
     {
+        public List<BasketVM> Baskets { get; set; }
+
     }
 }

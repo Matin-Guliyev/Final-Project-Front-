@@ -36,6 +36,7 @@ namespace Coffee_Blend_MVC.Controllers
                 Subject = contactVM.Subject,
             
             };
+            if (message == null) return RedirectToAction("Index", "error");
             _context.Messages.Add(message);
             _context.SaveChanges();
 

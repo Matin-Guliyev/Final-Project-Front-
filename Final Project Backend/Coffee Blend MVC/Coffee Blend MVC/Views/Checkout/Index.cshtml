@@ -1,4 +1,11 @@
-﻿<section id="about">
+﻿@model BillingAddress
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double Total = 0;
+}
+
+<section id="about">
     <div class="slider-item" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -22,19 +29,19 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-8 checkoutbody">
-                <form action="#" class="billing-form checkbodyItems ftco-bg-dark p-3 p-md-5">
+                <form  method="post" id="OrderForm" class="billing-form checkbodyItems ftco-bg-dark p-3 p-md-5">
                     <h3 class="mb-4 billing-heading">Billing Details</h3>
                     <div class="row align-items-end">
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="firstname">Firt Name</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" asp-for="FirstName" class="form-control" placeholder="" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="lastname">Last Name</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" asp-for="LastName" class="form-control" placeholder="" required>
                             </div>
                         </div>
                         <div class="w-100"></div>
@@ -58,38 +65,38 @@
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="streetaddress">Street Address</label>
-                                <input type="text" class="form-control" placeholder="House number and street name">
+                                <input type="text"  asp-for="StreetAddress"class="form-control" placeholder="House number and street name">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
+                                <input type="text" asp-for="StreetAdress2" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="towncity">Town / City</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input asp-for="Town" type="text" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="postcodezip">Postcode / ZIP *</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input asp-for="ZipCode" type="text" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="phone">Phone</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input asp-for="Phone" type="text" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group forms">
                                 <label for="emailaddress">Email Address</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input asp-for="Email" type="text" class="form-control" placeholder="">
                             </div>
                         </div>
                         <div class="w-100"></div>
@@ -110,22 +117,21 @@
                     <div class="col-md-6 d-flex" id="checkfooterLeft">
                         <div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
                             <h3 class="billing-heading mb-4">Cart Total</h3>
-                            <p class="d-flex flexp">
-                                <span>Subtotal</span>
-                                <span>$20.60</span>
-                            </p>
+                           
                             <p class="d-flex flexp">
                                 <span>Delivery</span>
                                 <span>$0.00</span>
                             </p>
-                            <p class="d-flex flexp">
-                                <span>Discount</span>
-                                <span>$3.00</span>
-                            </p>
+                            
                             <hr>
                             <p class="d-flex total-price">
                                 <b id="total">Total</b>
-                                <span class="pricetotal">$17.60</span>
+                                @foreach (BasketItem item in ViewBag.BasktetProduct)
+                                {
+                                    Total += (item.Count * item.Price);
+
+                                                   }
+                                <span>$@Total</span>
                             </p>
                         </div>
                     </div>
@@ -163,7 +169,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" id="Subbut">Pleace an order</button>
+                            <button type="submit" form="OrderForm" id="Subbut">Pleace an order</button>
                         </div>
                     </div>
                 </div>

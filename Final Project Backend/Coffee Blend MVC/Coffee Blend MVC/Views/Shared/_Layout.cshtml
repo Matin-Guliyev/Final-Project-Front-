@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@inject Coffee_Blend_MVC.Services.LayoutService layoutService;
+@{ 
+    ICollection<BasketVM> basktItems = await layoutService.GetBasketItems();
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -62,8 +66,8 @@
                             </li>
                             <li class="nav-item"><a asp-controller="Contact" asp-action="Index" class="nav-link text-white">Contact</a></li>
                             <li class="nav-item cart">
-                                <a asp-controller="Cart" asp-action="Index" class="nav-link text-white">
-                                    <span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span>
+                                <a asp-controller="Cart" asp-action="ViewCartBasket" class="nav-link text-white">
+                                    <span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>@basktItems.Count</small></span>
                                 </a>
                             </li>
                             @if (User.Identity.IsAuthenticated)

@@ -10,6 +10,7 @@ namespace Coffee_Blend_MVC.Models
     public class AppUser: IdentityUser
     {
         public string Name { get; set; }
+        public bool IsDeleted { get; set; }
 
         
         //public string Email { get; set; }

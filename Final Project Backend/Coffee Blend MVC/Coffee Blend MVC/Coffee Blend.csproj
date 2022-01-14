@@ -8,9 +8,74 @@
   <ItemGroup>
     <Compile Remove="Migrations\20211220101638_addButtoncolumnHomeSliders.cs" />
     <Compile Remove="Migrations\20211220101638_addButtoncolumnHomeSliders.Designer.cs" />
+    <Compile Remove="Migrations\20220113132846_CreateOrder.cs" />
+    <Compile Remove="Migrations\20220113132846_CreateOrder.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Admin\css\maps\style.css.map" />
+    <None Include="wwwroot\Admin\fonts\.DS_Store" />
+    <None Include="wwwroot\Admin\fonts\Roboto\.DS_Store" />
+    <None Include="wwwroot\Admin\fonts\Roboto\Roboto-Black.woff2" />
+    <None Include="wwwroot\Admin\fonts\Roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\Admin\fonts\Roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\Admin\fonts\Roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\Admin\fonts\Roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\Admin\images\.DS_Store" />
+    <None Include="wwwroot\Admin\images\auth\.DS_Store" />
+    <None Include="wwwroot\Admin\images\faces\.DS_Store" />
+    <None Include="wwwroot\Admin\images\logo-mini.svg" />
+    <None Include="wwwroot\Admin\images\logo.svg" />
+    <None Include="wwwroot\Admin\js\.DS_Store" />
+    <None Include="wwwroot\Admin\js\chart.js" />
+    <None Include="wwwroot\Admin\js\Chart.min.js" />
+    <None Include="wwwroot\Admin\js\dashboard.js" />
+    <None Include="wwwroot\Admin\js\data-table.js" />
+    <None Include="wwwroot\Admin\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\Admin\js\documentation.js" />
+    <None Include="wwwroot\Admin\js\file-upload.js" />
+    <None Include="wwwroot\Admin\js\hoverable-collapse.js" />
+    <None Include="wwwroot\Admin\js\jquery.dataTables.js" />
+    <None Include="wwwroot\Admin\js\off-canvas.js" />
+    <None Include="wwwroot\Admin\js\SocilaScript.js" />
+    <None Include="wwwroot\Admin\js\tabs.js" />
+    <None Include="wwwroot\Admin\js\template.js" />
+    <None Include="wwwroot\Admin\vendors\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\base\bootstrap.min.js.map" />
+    <None Include="wwwroot\Admin\vendors\base\vendor.bundle.base.js" />
+    <None Include="wwwroot\Admin\vendors\chart.js\Chart.min.js" />
+    <None Include="wwwroot\Admin\vendors\css\maps\style.css.map" />
+    <None Include="wwwroot\Admin\vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\Admin\vendors\datatables.net\jquery.dataTables.js" />
+    <None Include="wwwroot\Admin\vendors\fonts\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\fonts\Roboto\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\fonts\Roboto\Roboto-Black.woff2" />
+    <None Include="wwwroot\Admin\vendors\fonts\Roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\Admin\vendors\fonts\Roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\Admin\vendors\fonts\Roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\Admin\vendors\fonts\Roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\Admin\vendors\images\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\images\auth\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\images\faces\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\images\logo-mini.svg" />
+    <None Include="wwwroot\Admin\vendors\images\logo.svg" />
+    <None Include="wwwroot\Admin\vendors\js\.DS_Store" />
+    <None Include="wwwroot\Admin\vendors\js\chart.js" />
+    <None Include="wwwroot\Admin\vendors\js\Chart.min.js" />
+    <None Include="wwwroot\Admin\vendors\js\dashboard.js" />
+    <None Include="wwwroot\Admin\vendors\js\data-table.js" />
+    <None Include="wwwroot\Admin\vendors\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\Admin\vendors\js\documentation.js" />
+    <None Include="wwwroot\Admin\vendors\js\file-upload.js" />
+    <None Include="wwwroot\Admin\vendors\js\hoverable-collapse.js" />
+    <None Include="wwwroot\Admin\vendors\js\jquery.dataTables.js" />
+    <None Include="wwwroot\Admin\vendors\js\off-canvas.js" />
+    <None Include="wwwroot\Admin\vendors\js\SocilaScript.js" />
+    <None Include="wwwroot\Admin\vendors\js\tabs.js" />
+    <None Include="wwwroot\Admin\vendors\js\template.js" />
+    <None Include="wwwroot\Admin\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\Admin\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
+    <None Include="wwwroot\Admin\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
     <None Include="wwwroot\css\.DS_Store" />
     <None Include="wwwroot\css\bootstrap\.DS_Store" />
     <None Include="wwwroot\css\css\.DS_Store" />
@@ -74,6 +139,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="MimeKit" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Manage\Data\" />
+    <Folder Include="Areas\Manage\Models\" />
   </ItemGroup>
 
 </Project>

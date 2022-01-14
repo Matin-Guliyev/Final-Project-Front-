@@ -14,6 +14,6 @@ namespace Coffee_Blend_MVC.ViewModels
         [Required]
         [StringLength(maximumLength: 20, MinimumLength = 4)]
         public string Password { get; set; }
-        public string Name { get; set; }
+       
     }
 }

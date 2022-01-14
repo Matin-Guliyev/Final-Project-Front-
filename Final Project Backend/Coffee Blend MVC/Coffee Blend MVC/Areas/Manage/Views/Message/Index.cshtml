@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_LayoutAdmin.cshtml";
+    int orders = (ViewBag.SelectPage - 1) * 4;
+    int SelectedPage = ViewBag.SelectPage;
+    decimal totalPage = ViewBag.TotalPage;
+}
+@using Coffee_Blend_MVC.Models
+
+@model List<Message>
+
+<div class="container text-center" style="padding-top:50px">
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th> Number </th>
+                        <th> Sender </th>
+                        <th> Name </th>
+                        <th> Subject </th>
+                        <th> Text </th>
+                        <th> Delete </th>
+                        <th> Details </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var message in Model)
+                    {
+        <tr>
+            <td> @message.Id </td>
+
+            <td> @message.Email </td>
+            <td> @message.Name </td>
+            <td> @message.Subject </td>
+            <td> @message.sms </td>
+            <td> <a asp-action="DeleteMessage" asp-route-id="@message.Id" class="btn btn-danger delete"> Delete </a> </td>
+            <td> <a asp-action="ViewMessage" asp-route-id="@message.Id" class="btn btn-info"> Details </a> </td>
+        </tr>}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @if (SelectedPage > 1)
+            {
+<li class="page-item"><a asp-action="index" asp-route-page="@(SelectedPage-1)" class="page-link">Previous</a></li>}
+            @{ int startPage = (SelectedPage == 1 || totalPage <= 3) ? 1 : SelectedPage < totalPage ? SelectedPage - 1 : SelectedPage - 2;
+                int Page = totalPage > 2 ? startPage + 2 : (int)totalPage; }
+            @for (int i = startPage; i <= Page; i++)
+            {
+<li class="@(i==SelectedPage?"active":"")"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-search="@ViewBag.CurrentSearch">@i</a></li>}
+            @if (SelectedPage < totalPage)
+            {
+<li class="page-item"><a asp-action="index" asp-route-page="@(SelectedPage+1)" class="page-link">Next</a></li>}
+
+
+
+        </ul>
+    </nav>
+</div>

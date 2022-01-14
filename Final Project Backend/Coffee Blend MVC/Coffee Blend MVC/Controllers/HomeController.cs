@@ -1,6 +1,7 @@
 ﻿using Coffee_Blend_MVC.DAL;
 using Coffee_Blend_MVC.Models;
 using Coffee_Blend_MVC.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -23,6 +24,11 @@ namespace Coffee_Blend_MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
+
+            HttpContext.Session.SetString("Test", "Hello P221");
+            
+
+
             HomeVM homeVM = new HomeVM
             {
                 HomeSliders = await _context.HomeSliders.ToListAsync(),

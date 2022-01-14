@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Coffee_Blend_MVC.Views.Services.EmailServices;
 
 namespace Coffee_Blend_MVC
 {
@@ -51,7 +52,9 @@ namespace Coffee_Blend_MVC
                 options.Lockout.AllowedForNewUsers = true;
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
-           
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<LayoutService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,14 +69,17 @@ namespace Coffee_Blend_MVC
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                   name: "areas",
+                     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+                   );
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

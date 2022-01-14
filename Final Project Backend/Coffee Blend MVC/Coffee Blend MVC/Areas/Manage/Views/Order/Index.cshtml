@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_LayoutAdmin.cshtml";
+    int index = 0;
+    int orders = (ViewBag.SelectPage - 1) * 4;
+    int SelectedPage = ViewBag.SelectPage;
+    decimal totalPage = ViewBag.TotalPage;
+}
+ @model List<Order>
+
+
+<h1 style="display:flex;justify-content:center" class="h3 mb-4 text-gray-800">Order Page</h1>
+
+
+
+<table style="display: flex; justify-content: center;" class="table table-striped projects">
+    <tbody>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col"> Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Product count</th>
+            <th scope="col">Total Amount</th>
+            <th scope="col">Date</th>
+           
+            <th scope="col">Setting</th>
+        </tr>
+        @foreach (var order in Model)
+        {
+            index++;
+<tr>
+    <th scope="row">@index</th>
+    <td>@order.BillingAddress.FirstName</td>
+    <td>@order.BillingAddress.Email</td>
+    <td>@order.OrderItems.Count</td>
+    <td>
+        @order.TotalPrice
+    </td>
+    <td>@order.OrderDate.AddHours(4).ToString("HH:mm dd MMM yyyy")</td>
+
+   
+    <td>
+        <a asp-action="edit" asp-route-id="@order.Id" class="pd-setting-ed btn btn-success">Edit</a>
+        <a asp-action="Deleted" asp-route-id="@order.Id" style="" data-toggle="tooltip" title="" class="pd-setting-ed btn-item-delete delete btn btn-danger" data-original-title="Trash">Remove</a>
+    </td>
+</tr>
+}
+</table>
+
+<div class="d-flex justify-content-center mt-5">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @if (SelectedPage > 1)
+            {
+<li class="page-item"><a asp-action="index" asp-route-page="@(SelectedPage-1)" class="page-link">Previous</a></li>
+}
+            @{ int startPage = (SelectedPage == 1 || totalPage <= 3) ? 1 : SelectedPage < totalPage ? SelectedPage - 1 : SelectedPage - 2;
+                int Page = totalPage > 2 ? startPage + 2 : (int)totalPage; }
+            @for (int i = startPage; i <= Page; i++)
+            {
+<li class="@(i==SelectedPage?"active":"")"><a class="page-link" asp-action="index" asp-route-page="@i" asp-route-search="@ViewBag.CurrentSearch">@i</a></li>
+}
+            @if (SelectedPage < totalPage)
+            {
+<li class="page-item"><a asp-action="index" asp-route-page="@(SelectedPage+1)" class="page-link">Next</a></li>
+}
+
+
+
+        </ul>
+    </nav>
+</div>
+

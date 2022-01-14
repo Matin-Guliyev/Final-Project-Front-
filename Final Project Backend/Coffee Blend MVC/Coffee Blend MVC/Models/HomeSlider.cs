@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +23,10 @@ namespace Coffee_Blend_MVC.Models
         public  string Button1 { get; set; }
         [StringLength(255)]
         public string Button2 { get; set; }
+       public bool IsDeleted { get; set; }
+        [NotMapped]
+        public IFormFile Photo { get; set; }
+
 
     }
 }

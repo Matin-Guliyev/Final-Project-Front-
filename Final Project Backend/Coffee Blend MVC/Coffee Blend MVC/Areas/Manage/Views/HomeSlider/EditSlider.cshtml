@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "EditSlider";
+    Layout = "~/Areas/Manage/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model HomeSlider
+<div class="row justify-content-center">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create course</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <input hidden asp-for="Id" value="@Model.Id" />
+                    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group">
+                        <label asp-for="Text1">Title</label>
+                        <input asp-for="Text1" class="form-control" placeholder="Title" value="@Model.Text1">
+                        <span class="text-danger" asp-validation-for="Text1"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Text2">Text2</label>
+                        <input asp-for="Text2" class="form-control" placeholder="Text" value="@Model.Text2">
+                        <span class="text-danger" asp-validation-for="Text2"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Text3">Text3</label>
+                        <input asp-for="Text3" class="form-control" placeholder="Text" value="@Model.Text3">
+                        <span class="text-danger" asp-validation-for="Text3"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Button1">Button1</label>
+                        <input asp-for="Button1" class="form-control" placeholder="Button 1" value="@Model.Button1">
+                        <span class="text-danger" asp-validation-for="Button1"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Button2">Button2</label>
+                        <input asp-for="Button2" class="form-control" placeholder="Button 2" value="@Model.Button2">
+                        <span class="text-danger" asp-validation-for="Text3"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Photo">Photo</label>
+                        <img width="400px" src="~/images/@Model.Images" id="blah" />
+                        <input asp-for="Photo" class="form-control" accept="image/*" placeholder="Photo" id="imgInp">
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button asp-action="Index" class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>imgInp.onchange = evt => {
+        const [file] = imgInp.files
+        if (file) {
+            blah.src = URL.createObjectURL(file)
+        }
+    }</script>

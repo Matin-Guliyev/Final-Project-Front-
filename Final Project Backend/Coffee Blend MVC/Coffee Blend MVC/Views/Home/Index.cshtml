@@ -238,7 +238,7 @@
                             <h3><a href="~/#">@item.Head</a></h3>
                             <p>@item.Desc</p>
                             <p class="price"><span>$@item.Price</span></p>
-                            <button type="submit">Add To Cart</button>
+                            <a style=" border: 1px solid; text-decoration: none; color: white; padding: 9px;" asp-controller="cart" asp-action="addtocart" asp-route-id="@item.Id">Add To Cart</a>
                         </div>
                     </div>
                 </div>

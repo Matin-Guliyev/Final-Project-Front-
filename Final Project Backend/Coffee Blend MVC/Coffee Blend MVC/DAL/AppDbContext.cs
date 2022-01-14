@@ -34,6 +34,10 @@ namespace Coffee_Blend_MVC.DAL
         public DbSet<MenuHead> MenuHeads { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<BillingAddress> BillingAddresses { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
     }
 }

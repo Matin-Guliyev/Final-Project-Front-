@@ -52,10 +52,7 @@ namespace Coffee_Blend_MVC.Controllers
                 return View(loginVM);
             }
 
-            //if (appUser.EmailConfirmed == false)
-            //{
-            //    return RedirectToAction("Index", "Home");
-            //}
+           
 
 
 
@@ -112,7 +109,7 @@ namespace Coffee_Blend_MVC.Controllers
             await _signInManeger.SignInAsync(appuser, false);
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("ShopWise", "shopwisesite@gmail.com"));
+            message.From.Add(new MailboxAddress("CoffeeBlend", "shopwisesite@gmail.com"));
             message.To.Add(new MailboxAddress(appuser.Name, appuser.Email));
             message.Subject = "Reset Password";
 
@@ -127,7 +124,7 @@ namespace Coffee_Blend_MVC.Controllers
 
             string url = Url.Action("changepassword", "account", new { id = appuser.Id, token = emailconfirmtoken }, Request.Scheme);
 
-            emailbody = emailbody.Replace("{{Name}}", $"{appuser.Name}").Replace("{{url}}", $"{url}");
+            emailbody = emailbody.Replace("{{UserName}}", $"{appuser.UserName}").Replace("{{url}}", $"{url}");
 
             message.Body = new TextPart(TextFormat.Html) { Text = emailbody };
 
@@ -204,13 +201,13 @@ namespace Coffee_Blend_MVC.Controllers
 
             string url = Url.Action("changepassword", "account", new { id = appUser.Id, token = forgetpasswordtoken }, Request.Scheme);
 
-            emailbody = emailbody.Replace("{{Name}}", $"{appUser.Name}").Replace("{{url}}", $"{url}");
+            emailbody = emailbody.Replace("{{UserName}}", $"{appUser.UserName}").Replace("{{url}}", $"{url}");
 
             message.Body = new TextPart(TextFormat.Html) { Text = emailbody };
 
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("coffeeblend@gmail.com", "coffeeblend555");
+            smtp.Authenticate("shopwisesite@gmail.com", "shopwise!@123");
             smtp.Send(message);
             smtp.Disconnect(true);
 

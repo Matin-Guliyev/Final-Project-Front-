@@ -1,7 +1,9 @@
-﻿using Coffee_Blend_MVC.DAL;
+﻿using Coffee_Blend_MVC.ViewModels;
+using Coffee_Blend_MVC.DAL;
 using Coffee_Blend_MVC.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,66 +13,42 @@ namespace Coffee_Blend_MVC.Services
 {
     public class LayoutService
     {
-        private readonly IHttpContextAccessor _httpContext;
-        private readonly UserManager<AppUser> _userManager;
         private readonly AppDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly IHttpContextAccessor _accessor;
 
-        public LayoutService(IHttpContextAccessor httpContext, UserManager<AppUser> userManager, AppDbContext context)
+        public LayoutService(AppDbContext context, IHttpContextAccessor accessor, UserManager<AppUser> userManager)
         {
-            _httpContext = httpContext;
-            _userManager = userManager;
             _context = context;
+            _accessor = accessor;
+            _userManager = userManager;
         }
 
-        //public async Task<AppUserVM> GetUser()
-        //{
-        //    AppUserVM appUserVM = null;
-        //    if (_httpContext.HttpContext.User.Identity.IsAuthenticated)
-        //    {
-        //        AppUser appUser = await _userManager.FindByNameAsync(_httpContext.HttpContext.User.Identity.Name);
+        public async Task<List<BasketVM>> GetBasketItems()
+        {
+            List<BasketVM> productBaskets = new List<BasketVM>();
+            AppUser user = _accessor.HttpContext.User.Identity.IsAuthenticated ? await _userManager.FindByNameAsync(_accessor.HttpContext.User.Identity.Name) : null;
+            if (user == null)
+            {
+                if (_accessor.HttpContext.Request.Cookies["basket"] != null)
+                {
+                    productBaskets = JsonConvert.DeserializeObject<List<BasketVM>>(_accessor.HttpContext.Request.Cookies["basket"]);
+                }
+            }
+            else
+            {
+                productBaskets = _context.BasketItems.Where(x => x.AppUserId == user.Id).Select(x => new BasketVM
+                {
+                    Title = x.Title,
+                    Count = x.Count,
+                    Image = x.Image,
+                    ProductId = x.BestSellersImageId,
+                    Price = x.Price,
+                }).ToList();
+            }
 
-        //        appUserVM = new AppUserVM
-        //        {
-        //            Name = appUser.Name,
-        //            SurName = appUser.SurName
-        //        };
-        //    }
+            return productBaskets;
+        }
 
-        //    return appUserVM;
-        //}
-
-        //public async Task<List<BasketProduct>> GetBasket()
-        //{
-        //    #region Basket With Cookie
-        //    //string strBasket = _httpContext.HttpContext.Request.Cookies["basket"];
-
-        //    //List<BasketVM> products = null;
-
-        //    //if (strBasket == null)
-        //    //{
-        //    //    products = new List<BasketVM>();
-        //    //}
-        //    //else
-        //    //{
-        //    //    products = JsonConvert.DeserializeObject<List<BasketVM>>(strBasket);
-        //    //}
-        //    #endregion
-
-        //    List<BasketProduct> basketProducts = new List<BasketProduct>();
-
-        //    if (_httpContext.HttpContext.User.Identity.IsAuthenticated)
-        //    {
-        //        AppUser appUser = await _userManager.FindByNameAsync(_httpContext.HttpContext.User.Identity.Name);
-
-        //        basketProducts = await _context.BasketProducts
-        //           .Include(b => b.Product)
-        //           .Where(b => b.IsDeleted == false && b.AppUserId == appUser.Id)
-        //           .ToListAsync();
-        //    }
-
-        //    return basketProducts;
-        //}
     }
 }
-
-
